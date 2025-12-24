@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha clash</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="tailwind.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-extralight {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center">
+        <!-- home screen -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center">
+            <div class="flex flex-col items-center gap-10">
+                <h1 class="text-9xl text-white">Alpha Clash Pro</h1>
+                <p class="text-2xl font-bold text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick="play()" class="btn bg-white text-black">Play now</button>
+            </div>
+        </section>
+        <!-- play ground -->
+        <section id="playground" class="flex flex-col justify-center gap-10 pt-10 hidden">
+            <!-- screen -->
+            <div class="flex justify-center">
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] border-gray-700 w-1/2 h-[50vh] bg-base-100/80 rounded-3xl relative">
+                    <div class="flex justify-center">
+                        <div class="bg-gray-700 px-8 pb-4 rounded-b-3xl">
+                            <p class="text-white">Dont watch keyboard while playing</p>
+                        </div>
+                    </div>
+                    <p id="alphabet" class="grid place-content-center h-full pb-10 text-8xl uppercase">Hello!</p>
+                </div>
+
+            </div>
+            <!-- key board -->
+            <div>
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div>
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div>
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="flex justify-between w-3/4 mx-auto mt-8">
+                <button class="btn rounded-full px-6 bg-purple-700 hover:bg-purple-800 text-white border-none">
+                    Lifeline
+                    <span class="badge badge-sm">5</span>
+                </button>
+                <button class="btn rounded-full px-6 bg-indigo-700 hover:bg-indigo-800 text-white border-none">
+                    Score
+                    <span class="badge badge-sm">0</span>
+                </button>
+            </div>
+        </section>
+        <section class="score min-h-screen flex flex-col justify-center items-center hidden">
+            <div class="flex flex-col items-center gap-4 w-1/4 h-full rounded-3xl bg-[#FFFFFF33]">
+                <h1 class="text-white text-6xl font-bold">Score : <span> </span></h1>
+                <button class="btn">Play Now </button>
+                <p class="text-white">Practice will make you pro</p>
+            </div>
+        </section>
+    </main>
+    <script src="utility.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
