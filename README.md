@@ -2,11 +2,6 @@
 
 **Alpha Clash Pro** is an interactive web-based typing game designed to help users improve their keyboard typing speed and accuracy. With a modern, dark-themed UI and visual feedback, it turns typing practice into an engaging "Keyboard Kung Fu" session.
 
-## 🎮 Game Preview
-
-![Alpha Clash Pro Screenshot](./images/background.png)
-*(Note: Replace with an actual screenshot of the gameplay if available)*
-
 ## ✨ Features
 
 - **Interactive Gameplay**: Type the random alphabet displayed on the screen to score points.
@@ -52,4 +47,4 @@ Contributions, issues, and feature requests are welcome!
 5. Open a Pull Request.
 
 ---
-*Built with ❤️ for the Programming Hero Web Development Course.*
+*Built by Farhan Fuad*
